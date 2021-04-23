@@ -31,15 +31,15 @@ with open(os.path.join(here, "requirements.txt")) as requirements_txt:
 with open(os.path.join(here, "README.md")) as readme:
     LONG_DESCRIPTION = readme.read()
 
-# If you have problems importing platformio and esptool as modules you can set
+# If you have problems importing platformio and stm32tool as modules you can set
 # $ESPHOME_USE_SUBPROCESS to make ESPHome call their executables instead.
 # This means they have to be in your $PATH.
 if "ESPHOME_USE_SUBPROCESS" in os.environ:
-    # Remove platformio and esptool from requirements
+    # Remove platformio and stm32tool from requirements
     REQUIRES = [
         req
         for req in REQUIRES
-        if not any(req.startswith(prefix) for prefix in ["platformio", "esptool"])
+        if not any(req.startswith(prefix) for prefix in ["platformio", "stm32tool"])
     ]
 
 CLASSIFIERS = [
