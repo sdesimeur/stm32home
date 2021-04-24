@@ -121,3 +121,10 @@ tests/build/
 tests/.esphome/
 /.temp-clang-tidy.cpp
 .pio/
+
+/bin/
+/lib/
+/lib64
+/include/
+/share/
+pyvenv.cfg
